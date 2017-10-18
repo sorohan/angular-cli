@@ -89,7 +89,8 @@ export function getBrowserConfig(wco: WebpackConfigOptions) {
       ]
     },
     output: {
-      crossOriginLoading: buildOptions.subresourceIntegrity ? 'anonymous' : false
+      crossOriginLoading: buildOptions.subresourceIntegrity ? 'anonymous' : false,
+      libraryTarget: 'umd'
     },
     plugins: [
       new HtmlWebpackPlugin({
